@@ -2,13 +2,8 @@ from typing import List
 
 
 def majority_element(nums: List[int]) -> int:
-    sol = None
-    cnt = 0
-    for i in nums:
-        if cnt == 0:
-            sol = i
-        cnt += 1 if i == sol else -1
-    return sol
+    nums.sort()
+    return nums[len(nums) // 2]
 
 
 if __name__ == "__main__":
