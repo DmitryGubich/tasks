@@ -5,5 +5,5 @@ def remove_trailing_zeros(num: str) -> str:
 
 
 if __name__ == "__main__":
-    assert "512301" == remove_trailing_zeros(num="51230100")
-    assert "123" == remove_trailing_zeros(num="123")
+    assert remove_trailing_zeros(num="51230100") == "512301"
+    assert remove_trailing_zeros(num="123") == "123"

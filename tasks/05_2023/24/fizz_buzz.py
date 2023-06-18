@@ -16,9 +16,9 @@ def fizz_buzz(n: int) -> List[str]:
 
 
 if __name__ == "__main__":
-    assert ["1", "2", "Fizz"] == fizz_buzz(n=3)
-    assert ["1", "2", "Fizz", "4", "Buzz"] == fizz_buzz(n=5)
-    assert [
+    assert fizz_buzz(n=3) == ["1", "2", "Fizz"]
+    assert fizz_buzz(n=5) == ["1", "2", "Fizz", "4", "Buzz"]
+    assert fizz_buzz(n=15) == [
         "1",
         "2",
         "Fizz",
@@ -34,4 +34,4 @@ if __name__ == "__main__":
         "13",
         "14",
         "FizzBuzz",
-    ] == fizz_buzz(n=15)
+    ]

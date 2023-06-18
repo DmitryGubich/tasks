@@ -36,5 +36,5 @@ def sort_list(nums: List[int]) -> List[int]:
 
 
 if __name__ == "__main__":
-    assert [0, 0, 1, 1, 2, 5] == (sort_list(nums=[5, 1, 1, 2, 0, 0]))
-    assert [1, 2, 3, 5] == (sort_list(nums=[5, 2, 3, 1]))
+    assert sort_list(nums=[5, 1, 1, 2, 0, 0]) == [0, 0, 1, 1, 2, 5]
+    assert sort_list(nums=[5, 2, 3, 1]) == [1, 2, 3, 5]

@@ -28,18 +28,18 @@ def two_sum_best(nums: List[int], target: int) -> List[int]:
         hashmap[num] = i
 
 
-if __name__ == '__main__':
-    assert [0, 1] == two_sum(nums=[2, 7, 11, 15], target=9)
-    assert [1, 2] == two_sum(nums=[3, 2, 4], target=6)
-    assert [0, 1] == two_sum(nums=[3, 3], target=6)
-    assert [0, 2] == two_sum(nums=[3, 1, 3], target=6)
+if __name__ == "__main__":
+    assert two_sum(nums=[2, 7, 11, 15], target=9) == [0, 1]
+    assert two_sum(nums=[3, 2, 4], target=6) == [1, 2]
+    assert two_sum(nums=[3, 3], target=6) == [0, 1]
+    assert two_sum(nums=[3, 1, 3], target=6) == [0, 2]
 
-    assert [0, 1] == two_sum_better(nums=[2, 7, 11, 15], target=9)
-    assert [1, 2] == two_sum_better(nums=[3, 2, 4], target=6)
-    assert [0, 1] == two_sum_better(nums=[3, 3], target=6)
-    assert [0, 2] == two_sum_better(nums=[3, 1, 3], target=6)
+    assert two_sum_better(nums=[2, 7, 11, 15], target=9) == [0, 1]
+    assert two_sum_better(nums=[3, 2, 4], target=6) == [1, 2]
+    assert two_sum_better(nums=[3, 3], target=6) == [0, 1]
+    assert two_sum_better(nums=[3, 1, 3], target=6) == [0, 2]
 
-    assert [0, 1] == two_sum_best(nums=[2, 7, 11, 15], target=9)
-    assert [1, 2] == two_sum_best(nums=[3, 2, 4], target=6)
-    assert [0, 1] == two_sum_best(nums=[3, 3], target=6)
-    assert [0, 2] == two_sum_best(nums=[3, 1, 3], target=6)
+    assert two_sum_best(nums=[2, 7, 11, 15], target=9) == [0, 1]
+    assert two_sum_best(nums=[3, 2, 4], target=6) == [1, 2]
+    assert two_sum_best(nums=[3, 3], target=6) == [0, 1]
+    assert two_sum_best(nums=[3, 1, 3], target=6) == [0, 2]

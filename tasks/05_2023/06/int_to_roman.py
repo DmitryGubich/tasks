@@ -25,6 +25,6 @@ def int_to_roman(number: int) -> str:
 
 
 if __name__ == "__main__":
-    assert "III" == int_to_roman(number=3)
-    assert "LVIII" == int_to_roman(number=58)
-    assert "MCMXCIV" == int_to_roman(number=1994)
+    assert int_to_roman(number=3) == "III"
+    assert int_to_roman(number=58) == "LVIII"
+    assert int_to_roman(number=1994) == "MCMXCIV"

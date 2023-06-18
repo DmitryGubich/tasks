@@ -14,6 +14,6 @@ def merge_two_lists(list1: List, list2: List) -> List:
 
 
 if __name__ == "__main__":
-    assert [1, 1, 2, 3, 4, 4] == merge_two_lists(list1=[1, 2, 4], list2=[1, 3, 4])
-    assert [1, 3, 4, 5, 6, 7] == merge_two_lists(list1=[5, 6, 7], list2=[1, 3, 4])
-    assert [1, 3, 4, 5, 6, 7] == merge_two_lists(list1=[1, 3, 4], list2=[5, 6, 7])
+    assert merge_two_lists(list1=[1, 2, 4], list2=[1, 3, 4]) == [1, 1, 2, 3, 4, 4]
+    assert merge_two_lists(list1=[5, 6, 7], list2=[1, 3, 4]) == [1, 3, 4, 5, 6, 7]
+    assert merge_two_lists(list1=[1, 3, 4], list2=[5, 6, 7]) == [1, 3, 4, 5, 6, 7]

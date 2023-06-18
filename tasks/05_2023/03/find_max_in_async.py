@@ -39,4 +39,4 @@ def find_max_in_async():
 
 
 if __name__ == "__main__":
-    assert 3 == find_max_in_async()
+    assert find_max_in_async() == 3

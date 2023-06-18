@@ -10,6 +10,6 @@ def last_stone_weight(stones: List[int]) -> int:
 
 
 if __name__ == "__main__":
-    assert 1 == last_stone_weight(stones=[2, 7, 4, 1, 8, 1])
-    assert 1 == last_stone_weight(stones=[1])
-    assert 2 == last_stone_weight(stones=[1, 3])
+    assert last_stone_weight(stones=[2, 7, 4, 1, 8, 1]) == 1
+    assert last_stone_weight(stones=[1]) == 1
+    assert last_stone_weight(stones=[1, 3]) == 2

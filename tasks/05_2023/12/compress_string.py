@@ -36,6 +36,6 @@ def compress(data):
 
 
 if __name__ == "__main__":
-    assert "abc" == compress("abc")
-    assert "a3gb6c2d4f" == compress("aaagbbbbbbccddddf")
-    assert "a3b6c2a3d4f" == compress("aaabbbbbbccaaaddddf")
+    assert compress("abc") == "abc"
+    assert compress("aaagbbbbbbccddddf") == "a3gb6c2d4f"
+    assert compress("aaabbbbbbccaaaddddf") == "a3b6c2a3d4f"

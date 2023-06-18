@@ -25,8 +25,8 @@ def max_vowels(s: str, k: int) -> int:
 
 
 if __name__ == "__main__":
-    assert 3 == max_vowels(s="abciiidef", k=3)
-    assert 2 == max_vowels(s="aeiou", k=2)
-    assert 2 == max_vowels(s="leetcode", k=3)
-    assert 0 == max_vowels(s="lkdf", k=3)
-    assert 4 == max_vowels(s="weallloveyou", k=7)
+    assert max_vowels(s="abciiidef", k=3) == 3
+    assert max_vowels(s="aeiou", k=2) == 2
+    assert max_vowels(s="leetcode", k=3) == 2
+    assert max_vowels(s="lkdf", k=3) == 0
+    assert max_vowels(s="weallloveyou", k=7) == 4

@@ -27,6 +27,6 @@ def roman_to_int(s: str) -> int:
 
 
 if __name__ == "__main__":
-    assert 3 == roman_to_int(s="III")
-    assert 58 == roman_to_int(s="LVIII")
-    assert 1994 == roman_to_int(s="MCMXCIV")
+    assert roman_to_int(s="III") == 3
+    assert roman_to_int(s="LVIII") == 58
+    assert roman_to_int(s="MCMXCIV") == 1994

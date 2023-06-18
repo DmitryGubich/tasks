@@ -4,6 +4,6 @@ def reverse_integer(x: int) -> int:
 
 
 if __name__ == "__main__":
-    assert 0 == reverse_integer(x=1563847412)
-    assert -321 == reverse_integer(x=-123)
-    assert 21 == reverse_integer(x=120)
+    assert reverse_integer(x=1563847412) == 0
+    assert reverse_integer(x=-123) == -321
+    assert reverse_integer(x=120) == 21

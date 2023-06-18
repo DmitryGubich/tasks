@@ -4,6 +4,6 @@ def kth_factor(n: int, k: int) -> int:
 
 
 if __name__ == "__main__":
-    assert 3 == kth_factor(n=12, k=3)
-    assert 7 == kth_factor(n=7, k=2)
-    assert -1 == kth_factor(n=4, k=4)
+    assert kth_factor(n=12, k=3) == 3
+    assert kth_factor(n=7, k=2) == 7
+    assert kth_factor(n=4, k=4) == -1

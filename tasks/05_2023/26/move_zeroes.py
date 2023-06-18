@@ -6,5 +6,5 @@ def move_zeroes(nums: List[int]) -> List[int]:
 
 
 if __name__ == "__main__":
-    assert [1, 3, 12, 0, 0] == move_zeroes(nums=[0, 1, 0, 3, 12])
-    assert [0] == move_zeroes(nums=[0])
+    assert move_zeroes(nums=[0, 1, 0, 3, 12]) == [1, 3, 12, 0, 0]
+    assert move_zeroes(nums=[0]) == [0]

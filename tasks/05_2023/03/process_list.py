@@ -18,14 +18,7 @@ def process_list(list_of_words=None):
 
 
 if __name__ == "__main__":
-    assert [
-        ["cat", "tac"],
-        ["some"],
-        ["arc", "car"],
-        ["arm"],
-        ["assert", "asters", "stares"],
-        ["catt"],
-    ] == process_list(
+    assert process_list(
         [
             "cat",
             "tac",
@@ -38,4 +31,11 @@ if __name__ == "__main__":
             "stares",
             "catt",
         ]
-    )
+    ) == [
+        ["cat", "tac"],
+        ["some"],
+        ["arc", "car"],
+        ["arm"],
+        ["assert", "asters", "stares"],
+        ["catt"],
+    ]

@@ -46,6 +46,8 @@ if __name__ == "__main__":
             "price": 200,
         },
     ]
-    assert ["a", "b", "b"], 200 == find_cheapest_flight(
-        list_of_flights=flights, start="a", end="d"
-    )
+    assert find_cheapest_flight(list_of_flights=flights, start="a", end="d") == [
+        "a",
+        "b",
+        "b",
+    ], 200

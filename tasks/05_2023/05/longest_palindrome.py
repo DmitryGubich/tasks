@@ -10,6 +10,6 @@ def longest_palindrome(s: str) -> str:
 
 
 if __name__ == "__main__":
-    assert "bb" == longest_palindrome(s="bb")
-    assert "bab" == longest_palindrome(s="babad")
-    assert "bb" == longest_palindrome(s="cbbd")
+    assert longest_palindrome(s="bb") == "bb"
+    assert longest_palindrome(s="babad") == "bab"
+    assert longest_palindrome(s="cbbd") == "bb"

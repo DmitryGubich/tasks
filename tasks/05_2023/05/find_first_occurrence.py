@@ -9,6 +9,6 @@ def find_first_occurrence(haystack: str, needle: str) -> int:
 
 
 if __name__ == "__main__":
-    assert 0 == find_first_occurrence(haystack="sadbutsad", needle="sad")
-    assert -1 == find_first_occurrence(haystack="leetcode", needle="leeto")
-    assert 2 == find_first_occurrence(haystack="hello", needle="ll")
+    assert find_first_occurrence(haystack="sadbutsad", needle="sad") == 0
+    assert find_first_occurrence(haystack="leetcode", needle="leeto") == -1
+    assert find_first_occurrence(haystack="hello", needle="ll") == 2

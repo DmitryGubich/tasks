@@ -12,5 +12,5 @@ def top_k_frequent(nums: List[int], k: int) -> List[int]:
 
 
 if __name__ == "__main__":
-    assert [1, 2] == top_k_frequent(nums=[1, 1, 1, 1, 2, 2, 3], k=2)
-    assert [1] == top_k_frequent(nums=[1], k=1)
+    assert top_k_frequent(nums=[1, 1, 1, 1, 2, 2, 3], k=2) == [1, 2]
+    assert top_k_frequent(nums=[1], k=1) == [1]

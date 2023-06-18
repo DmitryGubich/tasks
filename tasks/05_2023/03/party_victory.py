@@ -16,6 +16,6 @@ def predict_party_victory(senate: str) -> str:
 
 
 if __name__ == "__main__":
-    assert "Radiant" == predict_party_victory(senate="RD")
-    assert "Dire" == predict_party_victory(senate="RDD")
-    assert "Dire" == predict_party_victory(senate="DDRRR")
+    assert predict_party_victory(senate="RD") == "Radiant"
+    assert predict_party_victory(senate="RDD") == "Dire"
+    assert predict_party_victory(senate="DDRRR") == "Dire"

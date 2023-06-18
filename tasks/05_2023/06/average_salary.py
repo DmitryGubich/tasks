@@ -10,5 +10,5 @@ def average_salary(salaries: List[int]) -> float:
 
 
 if __name__ == "__main__":
-    assert 2500.00000 == average_salary(salaries=[4000, 3000, 1000, 2000])
-    assert 2000.00000 == average_salary(salaries=[1000, 2000, 3000])
+    assert average_salary(salaries=[4000, 3000, 1000, 2000]) == 2500.00000
+    assert average_salary(salaries=[1000, 2000, 3000]) == 2000.00000

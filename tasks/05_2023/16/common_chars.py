@@ -6,5 +6,5 @@ def common_chars(words: List[str]) -> Set[str]:
 
 
 if __name__ == "__main__":
-    assert {"e", "l"} == common_chars(words=["bella", "label", "roller"])
-    assert {"c", "o"} == common_chars(words=["cool", "lock", "cook"])
+    assert common_chars(words=["bella", "label", "roller"]) == {"e", "l"}
+    assert common_chars(words=["cool", "lock", "cook"]) == {"c", "o"}

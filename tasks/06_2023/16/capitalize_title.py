@@ -10,7 +10,8 @@ def capitalize_title(title: str) -> str:
 
 
 if __name__ == "__main__":
-    assert "Capitalize The Title" == capitalize_title(title="capiTalIze tHe titLe")
-    assert "First Letter of Each Word" == capitalize_title(
-        title="First leTTeR of EACH Word"
+    assert capitalize_title(title="capiTalIze tHe titLe") == "Capitalize The Title"
+    assert (
+        capitalize_title(title="First leTTeR of EACH Word")
+        == "First Letter of Each Word"
     )

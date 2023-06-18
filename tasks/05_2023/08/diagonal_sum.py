@@ -13,19 +13,25 @@ def diagonal_sum(mat: List[List[int]]) -> int:
 
 
 if __name__ == "__main__":
-    assert 25 == diagonal_sum(
-        mat=[
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8, 9],
-        ]
+    assert (
+        diagonal_sum(
+            mat=[
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9],
+            ]
+        )
+        == 25
     )
-    assert 8 == diagonal_sum(
-        mat=[
-            [1, 1, 1, 1],
-            [1, 1, 1, 1],
-            [1, 1, 1, 1],
-            [1, 1, 1, 1],
-        ]
+    assert (
+        diagonal_sum(
+            mat=[
+                [1, 1, 1, 1],
+                [1, 1, 1, 1],
+                [1, 1, 1, 1],
+                [1, 1, 1, 1],
+            ]
+        )
+        == 8
     )
-    assert 5 == diagonal_sum(mat=[[5]])
+    assert diagonal_sum(mat=[[5]]) == 5

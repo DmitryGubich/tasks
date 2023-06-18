@@ -14,4 +14,4 @@ def find_bbox(coordinates: List[List[List[int]]]) -> List[List[int]]:
 
 
 if __name__ == "__main__":
-    assert [[0, 20], [20, 0]] == find_bbox([[[10, 10], [20, 0]], [[0, 20], [20, 10]]])
+    assert find_bbox([[[10, 10], [20, 0]], [[0, 20], [20, 10]]]) == [[0, 20], [20, 0]]

@@ -7,5 +7,5 @@ def climb_stairs(n: int) -> int:
 
 
 if __name__ == "__main__":
-    assert 2 == climb_stairs(n=2)
-    assert 3 == climb_stairs(n=3)
+    assert climb_stairs(n=2) == 2
+    assert climb_stairs(n=3) == 3

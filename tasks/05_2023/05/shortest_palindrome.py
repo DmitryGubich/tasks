@@ -7,5 +7,5 @@ def shortest_palindrome(string: str) -> str:
 
 
 if __name__ == "__main__":
-    assert "cbabc" == shortest_palindrome(string="abc")
-    assert "dcbabcd" == shortest_palindrome(string="abcd")
+    assert shortest_palindrome(string="abc") == "cbabc"
+    assert shortest_palindrome(string="abcd") == "dcbabcd"

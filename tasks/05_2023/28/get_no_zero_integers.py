@@ -12,5 +12,5 @@ def get_no_zero_integers(n: int) -> List[int]:
 
 
 if __name__ == "__main__":
-    assert [1, 1] == get_no_zero_integers(n=2)
-    assert [2, 9] == get_no_zero_integers(n=11)
+    assert get_no_zero_integers(n=2) == [1, 1]
+    assert get_no_zero_integers(n=11) == [2, 9]

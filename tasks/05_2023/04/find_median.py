@@ -12,6 +12,6 @@ def find_median(nums1: List[int], nums2: List[int]) -> float:
     return median
 
 
-if __name__ == '__main__':
-    assert 2.00000 == find_median(nums1=[1, 3], nums2=[2])
-    assert 2.50000 == find_median(nums1=[1, 2], nums2=[3, 4])
+if __name__ == "__main__":
+    assert find_median(nums1=[1, 3], nums2=[2]) == 2.00000
+    assert find_median(nums1=[1, 2], nums2=[3, 4]) == 2.50000
