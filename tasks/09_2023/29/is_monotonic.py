@@ -1,7 +1,9 @@
 def is_monotonic(nums: list[int]) -> bool:
     if len(nums) < 2:
         return True
+
     direction = 0
+
     for i in range(1, len(nums)):
         if nums[i] > nums[i - 1]:
             if direction == 0:
