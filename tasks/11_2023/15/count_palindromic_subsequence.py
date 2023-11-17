@@ -1,12 +1,15 @@
-import itertools
-
-
 def count_palindromic_subsequence(input_string: str) -> int:
-    result = 0
-    for combination in set(itertools.combinations(input_string, r=3)):
-        if combination == combination[::-1]:
-            result += 1
-    return result
+    res = 0
+    uniq = set(input_string)
+
+    for c in uniq:
+        start = input_string.find(c)
+        end = input_string.rfind(c)
+
+        if start < end:
+            res += len(set(input_string[start + 1 : end]))
+
+    return res
 
 
 if __name__ == "__main__":
