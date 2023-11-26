@@ -19,13 +19,16 @@ def two_sum_better(nums: List[int], target: int) -> List[int]:
             return [i, hashmap[complement]]
 
 
-def two_sum_best(nums: List[int], target: int) -> List[int]:
-    hashmap = {}
-    for i, num in enumerate(nums):
-        complement = target - num
-        if complement in hashmap:
-            return sorted([i, hashmap[complement]])
-        hashmap[num] = i
+def two_sum_best(nums: list[int], target: int) -> bool:
+    hashset = set()
+
+    for value in nums:
+        complement = target - value
+        if complement in hashset:
+            return True
+        hashset.add(value)
+
+    return False
 
 
 if __name__ == "__main__":
