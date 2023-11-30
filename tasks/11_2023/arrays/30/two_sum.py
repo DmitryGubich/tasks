@@ -3,7 +3,7 @@ def two_sum(nums: list[int], target: int) -> list[int]:
     for i, element in enumerate(nums):
         compliment = target - element
         if hashmap.get(compliment) is not None:
-            return [hashmap.get(compliment) + 1, i + 1]
+            return [hashmap.get(compliment), i]
         hashmap[element] = i
 
 
