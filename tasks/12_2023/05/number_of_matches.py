@@ -13,7 +13,7 @@ def number_of_matches(n: int | float) -> int:
     else:
         matches += number_of_matches((n - 1) / 2 + 1)
 
-    return matches
+    return int(matches)
 
 
 if __name__ == "__main__":
