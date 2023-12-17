@@ -60,6 +60,20 @@ class LinkedList:
         current_node.next = node_to_remove.next
         self.length -= 1
 
+    def reverse(self):
+        first = self.head
+        self.tail = self.head
+        second = self.head.next
+
+        while second:
+            temp_node = second.next
+            second.next = first
+            first = second
+            second = temp_node
+
+        self.head.next = None
+        self.head = first
+
     def __len__(self):
         return self.length
 
@@ -78,4 +92,8 @@ if __name__ == "__main__":
     my_linked_list.remove(1)  # 1 -> 99 -> 5 -> 16
     print(my_linked_list)
     my_linked_list.remove(0)  # 99 -> 5 -> 16
+    print(my_linked_list)
+    my_linked_list.append(24)  # 99 -> 5 -> 16 -> 24
+    print(my_linked_list)
+    my_linked_list.reverse()  # 24 -> 16 -> 5 -> 99
     print(my_linked_list)
