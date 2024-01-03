@@ -4,7 +4,7 @@ class Node:
         self.next = None
 
     def __str__(self):
-        return f"{self.value} -> {self.next}" if self.next else f"{self.value}"
+        return f"{self.value} <- {self.next}" if self.next else f"{self.value}"
 
 
 class Stack:
@@ -16,7 +16,7 @@ class Stack:
     def push(self, value):
         node = Node(value)
 
-        if not self.top:
+        if self.length == 0:
             self.top = node
             self.bottom = node
         else:
@@ -30,10 +30,10 @@ class Stack:
         return self.top
 
     def pop(self):
-        if not self.top:
+        if self.length == 0:
             return None
 
-        if self.top == self.bottom:
+        if self.length == 1:
             self.bottom = None
 
         temp_node = self.top
@@ -53,19 +53,19 @@ if __name__ == "__main__":
     stack.push("google")
     stack.push("udemy")
     stack.push("youtube")
-    print("stack: ", stack)  # youtube -> udemy -> google
+    print("stack:", stack)  # youtube -> udemy -> google
 
     last_element = stack.peek()
     print(last_element.value)  # youtube
-    print("stack: ", stack)  # youtube -> udemy -> google
+    print("stack:", stack)  # youtube -> udemy -> google
 
     remove_last_element = stack.pop()
     print(remove_last_element.value)  # youtube
-    print("stack: ", stack)  # udemy -> google
+    print("stack:", stack)  # udemy -> google
 
     stack.pop()
-    print("stack: ", stack)  # google
+    print("stack:", stack)  # google
     stack.pop()
-    print("stack: ", stack)  # None
+    print("stack:", stack)  # None
     stack.pop()
-    print("stack: ", stack)  # None
+    print("stack:", stack)  # None
