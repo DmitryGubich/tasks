@@ -74,6 +74,16 @@ class LinkedList:
         self.head.next = None
         self.head = first
 
+    def has_cycle(self):
+        slow_p = self.head
+        fast_p = self.head
+        while slow_p and fast_p and fast_p.next:
+            slow_p = slow_p.next
+            fast_p = fast_p.next.next
+            if slow_p == fast_p:
+                return True
+        return False
+
     def __len__(self):
         return self.length
 
@@ -97,3 +107,7 @@ if __name__ == "__main__":
     print(my_linked_list)
     my_linked_list.reverse()  # 24 -> 16 -> 5 -> 99
     print(my_linked_list)
+    print("Has loop?", my_linked_list.has_cycle())
+
+    my_linked_list.head.next.next.next.next = my_linked_list.head  # create loop
+    print("Has loop?", my_linked_list.has_cycle())
