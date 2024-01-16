@@ -19,19 +19,20 @@ class MyBinarySearchTree:
         node = Node(value)
         if self.root is None:
             self.root = node
-        else:
-            current_root = self.root
-            while True:
-                if value < current_root.value:
-                    if not current_root.left:
-                        current_root.left = node
-                        return node
-                    current_root = current_root.left
-                else:
-                    if not current_root.right:
-                        current_root.right = node
-                        return node
-                    current_root = current_root.right
+            return node
+
+        current_root = self.root
+        while True:
+            if value < current_root.value:
+                if not current_root.left:
+                    current_root.left = node
+                    return node
+                current_root = current_root.left
+            else:
+                if not current_root.right:
+                    current_root.right = node
+                    return node
+                current_root = current_root.right
 
     def lookup(self, value):
         current_root = self.root
@@ -69,6 +70,12 @@ class MyBinarySearchTree:
     #                 elif current_node.value > parent_node.value:
     #                     parent_node.right = current_node.right
 
+    def height(self, root: Node):
+        if root is None or root.left is None or root.right is None:
+            return 0
+
+        return max(self.height(root.left), self.height(root.right)) + 1
+
 
 def traverse(node):
     return {
@@ -103,3 +110,4 @@ if __name__ == "__main__":
     print(tree.lookup(14))
     print(tree.lookup(2))
     print(tree.lookup(39))
+    print(tree.height(tree.root))
