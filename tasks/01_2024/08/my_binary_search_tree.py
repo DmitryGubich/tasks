@@ -1,4 +1,5 @@
 import json
+from queue import Queue
 
 
 class Node:
@@ -49,32 +50,74 @@ class MyBinarySearchTree:
             else:
                 return True
 
-    # def remove(self, value):
-    #     if self.root is None:
-    #         return False
-    #     current_node = self.root
-    #     parent_node = None
-    #     while current_node:
-    #         if value < current_node.value:
-    #             parent_node = current_node
-    #             current_node = current_node.left
-    #         elif value > current_node.value:
-    #             parent_node = current_node
-    #             current_node = current_node.right
-    #         else:
-    #             if parent_node is None:
-    #                 self.root = current_node.left
-    #             else:
-    #                 if current_node.value < parent_node.value:
-    #                     parent_node.left = current_node.left
-    #                 elif current_node.value > parent_node.value:
-    #                     parent_node.right = current_node.right
-
     def height(self, root: Node):
         if root is None or root.left is None or root.right is None:
             return 0
 
         return max(self.height(root.left), self.height(root.right)) + 1
+
+    def is_symmetric(self):
+        q = Queue()
+        q.put((self.root, self.root))
+        while q:
+            l, r = q.get()
+            if l is None and r is None:
+                continue
+            if l is None or r is None:
+                return False
+            if l.value == r.value:
+                q.put((l.left, r.right))
+                q.put((l.right, r.left))
+            else:
+                return False
+        return True
+
+    def BFS(self):
+        result = []
+        q = Queue()
+        q.put(self.root)
+
+        while not q.empty():
+            current_node = q.get()
+            result.append(current_node.value)
+            if current_node.left:
+                q.put(current_node.left)
+            if current_node.right:
+                q.put(current_node.right)
+        return result
+
+    def DFS_inorder(self, root: Node, values: list[int]):
+        if root:
+            self.DFS_inorder(root.left, values)
+            values.append(root.value)
+            self.DFS_inorder(root.right, values)
+
+        return values
+
+    def DFS_preorder(self, root: Node, values: list[int]):
+        if root:
+            values.append(root.value)
+            self.DFS_preorder(root.left, values)
+            self.DFS_preorder(root.right, values)
+
+        return values
+
+    def DFS_postorder(self, root: Node, values: list[int]):
+        if root:
+            self.DFS_postorder(root.left, values)
+            self.DFS_postorder(root.right, values)
+            values.append(root.value)
+
+        return values
+
+    def isValidBST(self) -> bool:
+        values = self.DFS_inorder(self.root, [])
+
+        for i in range(1, len(values)):
+            if values[i - 1] >= values[i]:
+                return False
+
+        return True
 
 
 def traverse(node):
@@ -111,3 +154,8 @@ if __name__ == "__main__":
     print(tree.lookup(2))
     print(tree.lookup(39))
     print(tree.height(tree.root))
+    print(tree.BFS())
+    print(tree.DFS_inorder(tree.root, []))
+    print(tree.DFS_preorder(tree.root, []))
+    print(tree.DFS_postorder(tree.root, []))
+    print(tree.isValidBST())
