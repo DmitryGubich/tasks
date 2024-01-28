@@ -110,6 +110,9 @@ class MyBinarySearchTree:
 
         return values
 
+    def DFS(self):
+        return self.DFS_inorder(self.root, [])
+
     def isValidBST(self) -> bool:
         values = self.DFS_inorder(self.root, [])
 
@@ -154,8 +157,9 @@ if __name__ == "__main__":
     print(tree.lookup(2))
     print(tree.lookup(39))
     print(tree.height(tree.root))
-    print(tree.BFS())
-    print(tree.DFS_inorder(tree.root, []))
-    print(tree.DFS_preorder(tree.root, []))
-    print(tree.DFS_postorder(tree.root, []))
+    print("BFS: ", tree.BFS())
+    print("DFS inorder: ", tree.DFS_inorder(tree.root, []))
+    print("DFS preorder: ", tree.DFS_preorder(tree.root, []))
+    print("DFS postorder: ", tree.DFS_postorder(tree.root, []))
+    print("DFS: ", tree.DFS())
     print(tree.isValidBST())
