@@ -8,7 +8,7 @@ def frequency_sort(s: str) -> str:
 
     result = ""
     for k in sorted(hashmap.keys(), key=lambda x: -hashmap[x]):
-        result += f"{k*hashmap[k]}"
+        result += k * hashmap[k]
 
     return result
 
