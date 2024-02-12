@@ -2,10 +2,9 @@ from collections import defaultdict
 
 
 def majority_element(nums: list[int]) -> int:
-    count = int(len(nums) // 2)
     hashmap = defaultdict(int)
     for i in nums:
-        if hashmap.get(i, 0) == count:
+        if hashmap.get(i, 0) == len(nums) // 2:
             return i
         hashmap[i] += 1
 
