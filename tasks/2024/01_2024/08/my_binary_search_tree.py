@@ -1,5 +1,5 @@
 import json
-from queue import Queue
+from collections import deque
 
 
 class Node:
@@ -57,33 +57,32 @@ class MyBinarySearchTree:
         return max(self.height(root.left), self.height(root.right)) + 1
 
     def is_symmetric(self):
-        q = Queue()
-        q.put((self.root, self.root))
+        q = deque()
+        q.append((self.root, self.root))
         while q:
-            l, r = q.get()
+            l, r = q.popleft()
             if l is None and r is None:
                 continue
             if l is None or r is None:
                 return False
             if l.value == r.value:
-                q.put((l.left, r.right))
-                q.put((l.right, r.left))
+                q.append((l.left, r.right))
+                q.append((l.right, r.left))
             else:
                 return False
         return True
 
     def BFS(self):
         result = []
-        q = Queue()
-        q.put(self.root)
+        q = deque()
+        q.append(self.root)
 
-        while not q.empty():
-            current_node = q.get()
-            result.append(current_node.value)
-            if current_node.left:
-                q.put(current_node.left)
-            if current_node.right:
-                q.put(current_node.right)
+        while q:
+            current_node = q.popleft()
+            if current_node:
+                result.append(current_node.value)
+                q.append(current_node.left)
+                q.append(current_node.right)
         return result
 
     def DFS_inorder(self, root: Node, values: list[int]):
