@@ -1,6 +1,6 @@
 def decompress_string(data: str) -> str:
     result = ""
-    for i in range(0, len(data)):
+    for i in range(len(data)):
         symbol = data[i]
         if symbol.isnumeric():
             result += data[i - 1] * (int(symbol) - 1)
