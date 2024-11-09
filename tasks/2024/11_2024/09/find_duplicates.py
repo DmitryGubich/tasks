@@ -1,12 +1,12 @@
 def find_duplicates(nums: list[int]) -> list[int]:
-    rs = []
+    result = []
     for num in nums:
         num = abs(num)
         if nums[num - 1] < 0:
-            rs.append(num)
+            result.append(num)
         else:
-            nums[num - 1] = -nums[num - 1]
-    return rs
+            nums[num - 1] *= -1
+    return result
 
 
 if __name__ == "__main__":
