@@ -1,5 +1,5 @@
 def find_max_length(nums: list[int]) -> int:
-    count_map = {0: -1}
+    count_map = {}
     result = 0
     count = 0
     for i, num in enumerate(nums):
