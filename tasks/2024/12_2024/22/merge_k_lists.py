@@ -10,6 +10,15 @@ class ListNode:
         return self.val < other.val
 
 
+def values(head):
+    cur = head
+    result = [head.val]
+    while cur.next:
+        cur = cur.next
+        result.append(cur.val)
+    return result
+
+
 def merge_k_lists(lists: list[ListNode]) -> ListNode:
     heap = []
     for node in lists:
@@ -27,22 +36,20 @@ def merge_k_lists(lists: list[ListNode]) -> ListNode:
 
 
 if __name__ == "__main__":
-    last_node = ListNode(1)
+    last_node = ListNode(4)
+    first_list = ListNode(2)
+    first_list.next = last_node
 
-    node_4 = ListNode(2)
-    node_4.next = last_node
+    last_node_2 = ListNode(3)
+    second_list = ListNode(1)
+    second_list.next = last_node_2
 
-    node_3 = ListNode(3)
-    node_3.next = node_4
+    four = ListNode(4)
+    third = ListNode(3)
+    second = ListNode(2)
+    result = ListNode(1)
+    third.next = four
+    second.next = third
+    result.next = second
 
-    assert merge_k_lists(lists=[[1, 4, 5], [1, 3, 4], [2, 6]]) == [
-        1,
-        1,
-        2,
-        3,
-        4,
-        4,
-        5,
-        6,
-    ]
-    assert find_kth_largest(nums=[3, 2, 3, 1, 2, 4, 5, 5, 6], k=4) == 4
+    assert values(merge_k_lists(lists=[first_list, second_list])) == values(result)
