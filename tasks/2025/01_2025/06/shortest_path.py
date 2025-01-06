@@ -1,7 +1,7 @@
 from collections import deque
 
 
-def shortest_path(start: str, end: str) -> list[str]:
+def shortest_path(start: str, end: str, edges: list[str]) -> list[str]:
     graph = {}
     for edge in edges:
         a, b = edge.split(":")
@@ -42,4 +42,4 @@ if __name__ == "__main__":
 
     start = "s1"
     end = "s4"
-    assert shortest_path(start=start, end=end) == ["s1", "s2", "s4"]
+    assert shortest_path(start=start, end=end, edges=edges) == ["s1", "s2", "s4"]
