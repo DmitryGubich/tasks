@@ -6,12 +6,12 @@ def can_form_palindrome(s: str) -> bool:
         else:
             letters[char] += 1
 
-    sum = 0
+    odd_count = 0
     for i in letters.values():
         if i % 2 != 0:
-            sum += 1
+            odd_count += 1
 
-    return sum <= 1
+    return odd_count <= 1
 
 
 if __name__ == "__main__":
