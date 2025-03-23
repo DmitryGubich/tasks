@@ -23,7 +23,4 @@ def word_break(s: str, word_dict: list[str]) -> bool:
 if __name__ == "__main__":
     assert word_break(s="leetcode", word_dict=["leet", "code"]) is True
     assert word_break(s="applepenapple", word_dict=["apple", "pen"]) is True
-    assert (
-        word_break(s="catsandog", word_dict=["cats", "dog", "sand", "and", "cat"])
-        is False
-    )
+    assert word_break(s="catsandog", word_dict=["cats", "dog", "sand", "and", "cat"]) is False

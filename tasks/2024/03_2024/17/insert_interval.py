@@ -1,6 +1,4 @@
-def insert_interval(
-    intervals: list[list[int]], new_interval: list[int]
-) -> list[list[int]]:
+def insert_interval(intervals: list[list[int]], new_interval: list[int]) -> list[list[int]]:
     result = []
     for interval in intervals:
         if interval[1] < new_interval[0]:

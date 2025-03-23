@@ -14,15 +14,7 @@ def check_straight_line(coordinates: List[List[int]]) -> bool:
 
 
 if __name__ == "__main__":
+    assert check_straight_line(coordinates=[[1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 7]]) is True
     assert (
-        check_straight_line(
-            coordinates=[[1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 7]]
-        )
-        is True
-    )
-    assert (
-        check_straight_line(
-            coordinates=[[1, 1], [2, 2], [3, 4], [4, 5], [5, 6], [7, 7]]
-        )
-        is False
+        check_straight_line(coordinates=[[1, 1], [2, 2], [3, 4], [4, 5], [5, 6], [7, 7]]) is False
     )

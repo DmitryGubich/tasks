@@ -2,13 +2,11 @@ def process_list(list_of_words=None):
     if not list_of_words:
         return []
     result_map = {
-        word: []
-        for word in list_of_words
-        if not (type(word) == int or type(word) == float)
+        word: [] for word in list_of_words if not (type(word) is int or type(word) is float)
     }
     for word in list_of_words:
         for key in result_map.keys():
-            if sorted(list(word)) == sorted(list(key)):
+            if sorted(word) == sorted(key):
                 result_map[key].append(word)
     result = []
     for r in [k for k in result_map.values()]:

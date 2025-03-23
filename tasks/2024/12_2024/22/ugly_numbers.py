@@ -4,7 +4,7 @@ import heapq
 def nth_ugly_number(n: int) -> int:
     heap = [1]
     number = 0
-    for i in range(n):
+    for _ in range(n):
         number = heapq.heappop(heap)
         while heap and number == heap[0]:
             number = heapq.heappop(heap)

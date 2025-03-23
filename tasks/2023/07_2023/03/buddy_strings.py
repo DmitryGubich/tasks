@@ -1,5 +1,5 @@
 def buddy_strings(s: str, goal: str) -> bool:
-    diffs = [(a, b) for a, b in zip(s, goal) if a != b]
+    diffs = [(a, b) for a, b in zip(s, goal, strict=False) if a != b]
     return len(diffs) == 2 and diffs[0] == diffs[1][::-1]
 
 

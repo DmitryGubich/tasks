@@ -1,5 +1,4 @@
-def isBadVersion(n: int):
-    ...
+def isBadVersion(n: int): ...
 
 
 def first_bad_version(n: int) -> int:

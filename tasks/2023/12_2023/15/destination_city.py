@@ -10,8 +10,5 @@ def destination_city(paths: list[list[str]]) -> str:
 
 
 if __name__ == "__main__":
-    assert (
-        destination_city([["London", "Moscow"], ["Moscow", "Lima"], ["Lima", "Rome"]])
-        == "Rome"
-    )
+    assert destination_city([["London", "Moscow"], ["Moscow", "Lima"], ["Lima", "Rome"]]) == "Rome"
     assert destination_city([["B", "C"], ["D", "B"], ["C", "A"]]) == "A"

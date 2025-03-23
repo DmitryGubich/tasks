@@ -65,6 +65,4 @@ def number_to_words(num: int) -> str:
 
 if __name__ == "__main__":
     assert number_to_words(num=1957) == "One Thousand Nine Hundred Fifty Seven"
-    assert (
-        number_to_words(num=24839) == "Twenty Four Thousand Eight Hundred Thirty Nine"
-    )
+    assert number_to_words(num=24839) == "Twenty Four Thousand Eight Hundred Thirty Nine"

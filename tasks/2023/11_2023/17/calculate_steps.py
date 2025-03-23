@@ -4,11 +4,7 @@ def calculate_steps(steps: int) -> int:
     elif steps < 0:
         return 0
 
-    return (
-        calculate_steps(steps - 1)
-        + calculate_steps(steps - 2)
-        + calculate_steps(steps - 3)
-    )
+    return calculate_steps(steps - 1) + calculate_steps(steps - 2) + calculate_steps(steps - 3)
 
 
 if __name__ == "__main__":

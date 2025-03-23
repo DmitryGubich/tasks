@@ -21,9 +21,7 @@ def process_trades(lines):
                     prices[new_stock] = prices.get(new_stock, [])
                     new_price = float(new_price)
                     if (
-                        ten_min_ago_time
-                        <= datetime.strptime(new_time, DATE_FORMAT).time()
-                        <= time
+                        ten_min_ago_time <= datetime.strptime(new_time, DATE_FORMAT).time() <= time
                         and new_stock == stock
                     ):
                         prices.get(new_stock).append(new_price)
@@ -32,12 +30,8 @@ def process_trades(lines):
 
             low = min(prices.get(stock, [price]))
             high = max(prices.get(stock, [price]))
-            average = round(
-                sum(prices.get(stock, [price])) / len(prices.get(stock, [price])), 3
-            )
-            result.append(
-                f"{str_time} {stock} {price:.2f} {low:.2f} {high:.2f} {average:.3f}"
-            )
+            average = round(sum(prices.get(stock, [price])) / len(prices.get(stock, [price])), 3)
+            result.append(f"{str_time} {stock} {price:.2f} {low:.2f} {high:.2f} {average:.3f}")
         except Exception:
             result.append("ERROR")
     return result

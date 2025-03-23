@@ -16,8 +16,7 @@ async def handle_request(request: Request) -> Response:
             headers = {
                 key: value
                 for key, value in response.headers.items()
-                if key.lower()
-                not in ["content-encoding", "transfer-encoding", "content-length"]
+                if key.lower() not in ["content-encoding", "transfer-encoding", "content-length"]
             }
             body = await response.text()
             body = modify_content(content=body)

@@ -11,17 +11,6 @@ def calculate_space(first_coordinates: list[int], second_coordinates: list[int])
 
 
 if __name__ == "__main__":
-    assert (
-        calculate_space(first_coordinates=[6, 6, 8, 8], second_coordinates=[1, 8, 4, 9])
-        == 49
-    )
-    assert (
-        calculate_space(first_coordinates=[6, 6, 8, 8], second_coordinates=[1, 1, 4, 9])
-        == 64
-    )
-    assert (
-        calculate_space(
-            first_coordinates=[6, 6, 8, 8], second_coordinates=[8, 3, 10, 5]
-        )
-        == 25
-    )
+    assert calculate_space(first_coordinates=[6, 6, 8, 8], second_coordinates=[1, 8, 4, 9]) == 49
+    assert calculate_space(first_coordinates=[6, 6, 8, 8], second_coordinates=[1, 1, 4, 9]) == 64
+    assert calculate_space(first_coordinates=[6, 6, 8, 8], second_coordinates=[8, 3, 10, 5]) == 25

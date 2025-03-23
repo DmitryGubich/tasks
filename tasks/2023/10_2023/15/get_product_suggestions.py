@@ -25,22 +25,16 @@ if __name__ == "__main__":
         ["camera"],
         ["camera"],
     ]
-    assert get_product_suggestions(
-        products=["abcd", "abdc", "abaa", "acbd"], search="abad"
-    ) == [
+    assert get_product_suggestions(products=["abcd", "abdc", "abaa", "acbd"], search="abad") == [
         ["abaa", "abcd", "abdc"],
         ["abaa", "abcd", "abdc"],
         ["abaa"],
         [],
     ]
-    assert get_product_suggestions(
-        products=["abcd", "abdc", "abaa", "acbd"], search="p"
-    ) == [
+    assert get_product_suggestions(products=["abcd", "abdc", "abaa", "acbd"], search="p") == [
         [],
     ]
-    assert get_product_suggestions(
-        products=["abcd", "abdc", "abaa", "acbd"], search="sp"
-    ) == [
+    assert get_product_suggestions(products=["abcd", "abdc", "abaa", "acbd"], search="sp") == [
         [],
         [],
     ]

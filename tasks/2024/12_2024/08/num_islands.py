@@ -11,9 +11,7 @@ def num_islands(grid: list[list[str]]) -> int:
                 dfs(new_row, new_col, grid)
 
     def is_inbounds(grid: list[list[str]], row: int, col: int) -> bool:
-        return (
-            0 <= row < len(grid) and 0 <= col < len(grid[0]) and grid[row][col] == "1"
-        )
+        return 0 <= row < len(grid) and 0 <= col < len(grid[0]) and grid[row][col] == "1"
 
     count = 0
     num_rows = len(grid)

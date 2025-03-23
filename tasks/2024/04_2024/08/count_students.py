@@ -21,6 +21,4 @@ def count_students(students: list[int], sandwiches: list[int]) -> int:
 
 if __name__ == "__main__":
     assert count_students(students=[1, 1, 0, 0], sandwiches=[0, 1, 0, 1]) == 0
-    assert (
-        count_students(students=[1, 1, 1, 0, 0, 1], sandwiches=[1, 0, 0, 0, 1, 1]) == 3
-    )
+    assert count_students(students=[1, 1, 1, 0, 0, 1], sandwiches=[1, 0, 0, 0, 1, 1]) == 3

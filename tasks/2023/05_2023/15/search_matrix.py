@@ -2,7 +2,7 @@ from typing import List
 
 
 def search_matrix(matrix: List[List[int]], target: int) -> bool:
-    m, n = len(matrix), len(matrix[0])
+    n = len(matrix[0])
     i = 0
     j = n - 1
     while True:

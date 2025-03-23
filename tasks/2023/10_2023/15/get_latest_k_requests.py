@@ -11,7 +11,9 @@ def get_latest_k_requests(requests, K):
 
 
 if __name__ == "__main__":
-    assert get_latest_k_requests(
-        requests=["item1", "item2", "item2", "item1", "item3"], K=3
-    ) == ["item3", "item1", "item2"]
+    assert get_latest_k_requests(requests=["item1", "item2", "item2", "item1", "item3"], K=3) == [
+        "item3",
+        "item1",
+        "item2",
+    ]
     assert get_latest_k_requests(requests=["item1", "item2"], K=3) == ["item2", "item1"]

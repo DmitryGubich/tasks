@@ -28,7 +28,7 @@ class MyList:
         return self.length
 
     def __str__(self):
-        return f'[{", ".join(str(x) for x in self.data)}]'
+        return f"[{', '.join(str(x) for x in self.data)}]"
 
 
 if __name__ == "__main__":

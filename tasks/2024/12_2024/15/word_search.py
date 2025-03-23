@@ -2,14 +2,7 @@ def exist(board: list[list[str]], word: str) -> bool:
     def back_tracking(i, j, ind):
         if ind == len(word):
             return True
-        if (
-            i < 0
-            or i >= row
-            or j < 0
-            or j >= col
-            or visited[i][j]
-            or board[i][j] != word[ind]
-        ):
+        if i < 0 or i >= row or j < 0 or j >= col or visited[i][j] or board[i][j] != word[ind]:
             return False
         visited[i][j] = True
         if (

@@ -15,9 +15,7 @@ def elevators(floors: list[list[int, int]]) -> int:
 
 
 if __name__ == "__main__":
-    assert (
-        elevators(floors=[[2, 6], [5, 6], [2, 5], [2, 2], [6, 8], [2, 2], [0, 2]]) == 6
-    )
+    assert elevators(floors=[[2, 6], [5, 6], [2, 5], [2, 2], [6, 8], [2, 2], [0, 2]]) == 6
     assert (
         elevators(
             floors=[

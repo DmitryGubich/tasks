@@ -1,7 +1,3 @@
-from heapq import heapify, heappush, heappop
-import heapq
-
-
 def k_largest_pair_sum_brute(nums: list[int], k: int) -> int:
     sums = []
     for i in range(len(nums)):

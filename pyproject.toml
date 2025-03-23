@@ -1,0 +1,59 @@
+[project]
+name = "tasks"
+version = "0.1.0"
+description = "Interesting task from interviews"
+readme = "README.md"
+requires-python = ">=3.13.2"
+dependencies = [
+    "aiohttp>=3.11.14",
+    "beautifulsoup4>=4.13.3",
+    "pre-commit>=4.2.0",
+    "requests>=2.32.3",
+    "ruff>=0.11.2",
+    "ryanair-py>=3.0.0",
+]
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "F", # pyflakes
+    # "I",  # isort
+    "C", # flake8-comprehensions
+    "B", # flake8-bugbear
+]
+ignore = [
+    "E501", # line too long, handled by black
+    "B008", # do not perform function calls in argument defaults
+    "C901", # complexity
+    "E741", # ambiguous variable name
+    "B007", # unused loop variable
+    "C416", # unnecessary list comprehension
+]
+fixable = ["A", "B", "C", "D", "E", "F"]
+unfixable = []
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+line-length = 100
+target-version = "py313"

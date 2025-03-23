@@ -29,7 +29,4 @@ def num_special(matrix: list[list[int]]) -> int:
 if __name__ == "__main__":
     assert num_special(matrix=[[1, 0, 0], [0, 0, 1], [1, 0, 0]]) == 1
     assert num_special(matrix=[[1, 0, 0], [0, 1, 0], [0, 0, 1]]) == 3
-    assert (
-        num_special(matrix=[[0, 0, 1, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 1, 0, 0]])
-        == 2
-    )
+    assert num_special(matrix=[[0, 0, 1, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 1, 0, 0]]) == 2
