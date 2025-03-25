@@ -39,9 +39,4 @@ if __name__ == "__main__":
     robot_location = (2, 2)
     max_steps = 9
 
-    assert (
-        find_possible_paths(
-            grid=grid, robot_location=robot_location, max_steps=max_steps
-        )
-        == 63
-    )
+    assert find_possible_paths(grid=grid, robot_location=robot_location, max_steps=max_steps) == 63
